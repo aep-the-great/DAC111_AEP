@@ -7,5 +7,6 @@ Created on Sat Apr 23 17:50:38 2021
 
 def main():
     print('Hello World')
+    print('Hi')
     
 main()
