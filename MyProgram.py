@@ -22,7 +22,7 @@ def main():
 """
 select cast(longitude as float),
 cast(latitude as float)
-from airports limit 1;
+from airports;
 """
     ).fetchall()
     
