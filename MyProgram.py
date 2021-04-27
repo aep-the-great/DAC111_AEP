@@ -22,7 +22,7 @@ def main():
 """
 select cast(longitude as float),
 cast(latitude as float)
-from airports;
+from airports limit 1;
 """
     ).fetchall()
     
@@ -40,6 +40,12 @@ from airports;
     
     myMap.drawcoastlines()
     myMap.drawmapboundary()
+    
+    x, y = myMap([l[0] for l in coords],
+                 [l[1] for l in coords])
+    
+    myMap.scatter(x, y, 1, marker='o',color='red')
+
     
     
 main()
